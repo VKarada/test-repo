@@ -1,0 +1,40 @@
+
+.container {
+    background-color: aqua;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "header header header header"
+      "main main . sidebar"
+      "footer footer footer footer";
+  }
+
+.flex-container {
+    background-color: blue;
+    display: flex;
+
+}
+
+.item-a {
+    background-color: brown;
+    grid-area: header;
+    padding: 80px;
+  }
+  .item-b {
+    background-color: darkgoldenrod;
+    grid-area: main;
+    padding: 80px;
+  }
+  .item-c {
+    background-color: chartreuse;
+    grid-area: sidebar;
+    padding:80px;
+  }
+  .item-d {
+    background-color: blueviolet;
+    grid-area: footer;
+    padding: 80px;
+  }
+  
+ 

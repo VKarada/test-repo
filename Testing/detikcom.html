@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0%;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 35%;
+            grid-template-areas: 
+            ". . search . .";
+        }
+        .menubar {
+            top: 0;
+            position: fixed;
+            display: flex;
+            background-color: #ffffff;
+            margin: 0;
+            /* padding: 1% 0; */
+            width: 100%;
+            align-items: center;
+            border-bottom: 1px solid #f4f4f4;
+        }
+        .tmenu {
+            padding-top: 20px;
+            height: 40px;
+            padding-right: 2%;
+            border-right: 1px solid #e8e8e8;
+            margin-left: 1%;
+            font-size: 17px;
+            color: #5b5b5b;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .tmenu1 {
+            font-size: 17px;
+            color: #5b5b5b;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .pmenu {
+            width:14%;
+        }
+        .itema {
+            background-color: #ffffff;
+            grid-area: search;
+        }
+        .cari {
+            display: flex;
+            align-items: center;
+            padding: 5px 0px;
+            padding-left: 6px;
+            width: 100%;
+            border: solid 2px #e8e8e8;
+            border-radius: 20px;
+        }
+        .sicon {
+            background-image: #ffffff;
+            float: right;
+            width: 6%;
+        }
+        .text {
+            border: none;
+            outline: none;
+            background-color: #ffffff;
+            border-radius: 15px;
+            width: 100%;
+            padding: 2px 7px;
+        }
+        .itemb {
+            /* height: 60px; */
+            display: flex;
+            padding: 0 0 0 1%;
+            border-left: 1px solid #e8e8e8;
+            margin-left: 15%;
+        }
+        .daftar {
+            color: #ffffff;
+            border-radius: 20px;
+            margin-right: 5%;
+            height: 40px;
+            width: 90%;
+            padding:  3% 7%;
+            background-color: #244b9c;
+            opacity: 1;
+            transition: 0.3s;
+        }
+        .daftar:hover {
+            background-color: #478de6;
+        }
+        .masuk {
+            height: 40px;
+            background-color: #ffffff;
+            color: #3055a1;
+            border-color: #3055a1;
+            border-radius: 20px;
+            width: 90%;
+            padding:  3px 10px;
+        }
+        .menukiri {
+            align-items: center;
+            display: flex;
+            margin-left: 10%;
+        }
+        .bdaf {
+            align-items: center;
+            display: flex;
+            height: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div class="menubar">
+        <div class="menukiri">
+            <img src="Foto/menu.png" class="pmenu">
+            <div class="tmenu"><strong class="tmenu1">MENU</strong></div>
+        </div>
+        <div class="grid">
+            <div class="itema">
+                <div class="cari">
+                    <input type="text" placeholder="Cari Berita"class="text">
+                    <img src="Foto/search.png" class="sicon">
+                </div>
+            </div>
+        </div>
+        <div class="itemb">
+            <div class="bdaf">
+                <input type="button" class="daftar" value="Daftar MPC">
+                <input type="button" class="masuk" value="Masuk">
+            </div>
+        </div>
+    </div>
+    <div>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p><p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+    </div>
+</body>
+</html>

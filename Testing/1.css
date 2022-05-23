@@ -1,0 +1,44 @@
+body {
+  background-color: aqua;
+}
+
+.container {
+  display: grid;
+  background-color: brown;
+  grid-template-columns:;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "header header header header"
+    "main main . sidebar"
+    "footer footer footer footer";
+}
+
+.flex-container {
+  display: flex;
+  background-color: darkorange;
+  flex-wrap: wrap;
+}
+
+.item-a {
+  grid-area: header;
+  background-color: darkgray;
+}
+
+.item-b {
+  grid-area: main;
+  background-color: blue;
+}
+
+.item-c {
+  grid-area: sidebar;
+  background-color: darksalmon;
+}
+.item-d {
+  grid-area: footer;
+  background-color: deeppink;
+}
+
+
+.form {
+  background-color: blueviolet;
+}

@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>detikcom - Informasi Berita Terkini</title>
+    <link rel="icon" href="Foto/logo detik.jpg">
+    <style>
+        body {
+            
+            background-color: gray;
+        }
+        .pembungkus {
+            top: 0;
+            position: fixed;
+            width: 83%;
+            background-color: white;
+            z-index: 10;
+        }
+        .pembungkus1 {
+            width: 100%;
+            padding: 0 10%;
+            border-bottom: 1px solid;
+            background-color: white;
+        }
+        .rela {                       
+            position: relative;
+            width: 100%;
+            height: 50px;
+        }
+        .abso {
+            position: absolute;
+        }
+        .kiri {
+            top: 0%;
+            left: 0%;
+        }
+        .kanan {
+            width: 12%;
+            top: 0%;
+            right: 10%;
+        }
+        .tengah {
+            
+            width: 100%;
+            text-align: center;
+        }
+        .menu {
+            width: 100%;
+            height: 50px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            border-right: 1px solid;
+        }
+        .menu1 {
+            width: 100%;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            
+        }
+        .pmenu{
+            /* height: 50%; */
+            width: 13%;
+            margin-right: 3%;
+        }
+        .tmenu {
+            margin: 0%;
+        }
+        .sicon {
+            width: 1.9%;
+        }
+        .cari {
+            width: 100%;
+            outline: none;
+            border-radius: 20px;
+            padding: 7px 15px;
+            border: none;
+        }
+        .menu2 {
+            align-items: center;
+            height: 50px;
+            width: 100%;
+            display: flex;
+            border-left: 1px solid;
+            padding: 0 18%;
+        }
+        .tombol1 {
+            border-color: #244B9C;
+            height: 80%;
+            border-radius: 20px;
+            background-color: #244B9C;
+            color:whitesmoke;
+            text-align: center;
+            width: max-content;
+            padding: 1% 15%;
+            margin-right: 5%;
+        }
+        .tombol2 {
+            height: 80%;
+            padding: 2% 10%;
+            color: #244B9C;
+            border-color: #244B9C;
+            border-radius: 20px;
+        }
+        .border {
+            border-radius: 20px;
+            align-items: center;
+            width: 30%;
+            height: 65%;
+            margin: 0 0%;
+            border: 1px solid black;
+        }
+        .menu1 {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        .width {
+            width: 100%;
+           
+        }
+        .tulisan {
+            position: relative;
+            display: inline-block;
+            width: 98%;
+            padding-left: 10px;
+        }
+        .ctext {
+            padding-top: 20%;
+            padding-left: 15%;
+            padding-right: 15%;
+        }
+        .ul1 {
+            display: flex;
+            justify-content: space-evenly;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #21409a;
+        }
+
+        li {
+        float: left;
+        width: max-content;
+        }
+
+        .a1 {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 10px;
+        text-decoration: none;
+        }
+        .daerah {
+            float: left;
+            overflow: hidden;
+        }
+        .a1:hover{
+            color: #ee5a42;
+        }
+        .daerah button:hover, .daerahbtn:hover ,.daerahbtn:focus {
+            color: #ee5a42;
+        }
+        .nav {
+            margin-top: 20px;
+        }
+        .daerah .daerahbtn {
+            cursor: pointer;
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 14px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+        .tkirim button:hover, .tkirim:focus {
+            opacity: 0.8;
+        }
+        .pkdoym button:hover, .kdoym:focus {
+            color: black;
+            opacity: 0.8;
+        }
+        .daerah-content {
+            left: 84.5%;
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            z-index: 1;
+        }
+        .daerah-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .daerah-content a:hover {
+            color: #244B9C;
+        }
+        .vsize {
+            width: 14px;
+        }
+        .li2 .a2:hover {
+            color: #21409a;
+        }
+        .show {
+            display: block;
+        }
+        .ul2 {
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            padding: 0;
+            display: flex;
+            background-color: #f0f0f0;
+            list-style-type: none;
+            width: 100%;
+            margin: 0%;
+            text-align: center;
+            float: left;
+        }
+        .a2 {
+            
+            text-decoration: none;
+            color: black;
+            /* width:fit-content; */
+        }
+        .li2 {
+            width: fit-content;
+            padding: 5px 7px;
+        }
+        .nav2 {
+            width: 100%;
+        }
+        .mini {
+            width: 20px;
+        }
+        .a3 {
+            text-decoration: none;
+            color: black;
+            width: 150px;
+        }
+        .li3 {
+            padding: 5px 2px;
+            width: 170px;
+        }
+        .a4 {
+            color: #ee5a42;
+        }
+        .a5 {
+            color: #566db0;
+        }
+        .pberita {
+            position: relative;
+            background-color: white;
+            margin-top: 10px;
+            padding-top: 8px;
+            width: 100%;
+            height: 100%;
+        }
+        .foto1 {
+            width: 200px;
+            height: 117px;
+            overflow: hidden;
+            /* margin-bottom: 10px; */
+        }
+        .foto2 {
+            width: 200px;
+            height: 130px;
+            overflow: hidden;
+        }
+        .berita1 {
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .beritam {
+            width: min-content;
+            height: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .beritak {
+            align-content: center;
+            text-align: left;
+            margin-top: 10px;
+            text-decoration: none;
+            color: black;
+        }
+        .beritak1 {
+            padding-bottom: 15.5px;
+        }
+        .berita2 {
+            background-image: linear-gradient(to right, #21409a, #007bbc);
+            position: relative;
+            margin-top: 30px;
+            width: 700px;
+            margin-left: 10px;
+            padding-bottom: 5px;
+            padding-top: 0;
+        }
+        .vfoto {
+            width: 700px;
+            height: 400px;
+        }
+        .vteks {
+            color: white;
+            text-decoration: none;
+            font-size: 25px;
+            position: absolute;
+            bottom: 17%;
+            left: 4%;
+        }
+        .terkait {
+            padding-left: 10px;
+        }
+        .terkait1 {
+            display: flex;
+            /* position: relative; */
+        }
+        .hr1 {
+            width: 84%;
+        }
+        .terkait2 {
+            color: #ee5a42;
+            width: 15%
+        }
+        .isiterkait {
+            line-height:21px;
+            margin-top: 8px;
+            display: flex;
+        }
+        .bizfoto {
+            width: 200px;
+        }
+        .biznet {
+            margin-top: 10px;
+            display:flex ;
+            margin-left: 10px;
+            padding-bottom: 20px;
+        }
+        .pbiz {
+            margin-left: 10px;
+            margin-top: 20px;
+            width: 715px;
+        }
+        .biz {
+            margin-right: 0px;
+            float: left;
+            width: 150px;
+        }
+        .tbiz {
+            display: flex;
+            margin-right: 30px;
+            width: 355px;
+        }
+        .biz1 {
+            line-height: 25px;
+        }
+        .padbiz {
+            margin-top: 0px;
+            margin-left: 10px;
+        }
+        .a6 {
+            width: 355px;
+            margin-right: 30px;
+        }
+        .hrb {
+            padding-bottom: 20px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        .fdoym {
+            float: left;
+        }
+        .doym {
+            top: 22%;
+            right: 0.5%;
+            position:absolute;
+            width: 300px;
+            height: 457px;
+        }
+        .pdoym {
+            position: relative;
+            width: 200px;
+            
+        }
+        .tdoym {
+            font-size: 13px;
+        }
+        .bagi {
+            display: flex;
+            width: 280px;
+            margin-bottom: 20px;
+        }
+        .kirim {
+            width:80px;
+            color: white;
+            border-radius: 5px;
+            border: none;
+            background-color: #ee5a42;
+            padding: 5px 5px;
+        }
+        .kdoym {
+            display: flex;
+            padding: 5px 5px;
+            width: 200px;
+            position: absolute;
+            bottom: 0%;
+            left: 15%;
+            color: #ee5a42;
+            background-color: #f0f0f0;
+            border: none;
+            align-items: center;
+        }
+        .pkdoym {
+            margin-top: 265px;
+            width: 280px;
+            text-align: center;
+        }
+        .pbdoym {
+            width: 300px;
+            display: flex;
+        }
+        .doym1 {
+            height: 50px;
+            top: 20%;
+            float: left;
+            width: 300px;
+        }
+        .doym2 {
+            float: left;
+            width: 300px;
+            top: 41%;
+            left: 0%;
+        }
+        .doym3 {
+            float: left;
+            width: 300px;
+            top: 62%;
+            left: 0%;
+        }
+        .tdoym1 {
+            /* padding-right: 6.6px;
+            font-size: 15px;
+            padding-top: 15px;
+            padding-left: 90px;
+            margin-left: 30px; */
+        }
+        .bradius {
+            border-radius: 5px;
+        }
+        .doym4 {
+            position: absolute;
+            top: 0px;
+        }
+        /*zdoym untuk pembungkus zdoym1 untuk isinya*/
+        .pzoom2 {
+            width: 200px;
+            height: 117px;
+            overflow: hidden;
+        }
+        .pzoom5 {
+            width: 115px;
+            height: 80px;
+            overflow: hidden;
+        }
+        .foto5 {
+            /* float: left;
+            margin-top: 8px; */
+        }
+        .pzoom5 .foto5 {
+            width: 115px;
+            height: 80px;
+            transition: transform .5s ease;
+            overflow: hidden;
+        }
+        .pzoom4 {
+            width: 700px;
+            height: 400px;
+            overflow: hidden;
+        }
+        .pzoom4 .foto4 {
+            width: 700px;
+            height: 400px;
+            overflow: hidden;
+            transition: transform .5s ease;
+        }
+        .b8:hover .bfoto {
+            transform: scale(1.2);
+        }
+        .b8:hover .zoren {
+            color: #ee5a42;
+        }
+        .b9:hover .zoren {
+            color: #ee5a42;
+        }
+        .b10:hover .zoren {
+            color: #ee5a42;
+        }
+        .pzoom2 .foto1 {
+            transition: transform .5s ease;
+        }
+        .pzoom3 {
+            width: 355px;
+            height: 117px;
+            overflow: hidden;
+        }
+        .pzoom3 .foto2 {
+            transition: transform .5s ease;
+        }
+        .b1:hover .bfoto {
+            transform: scale(1.2);
+        }
+        .b1:hover .zbiru {
+            color: #244B9C;
+        }
+        .b2:hover .bfoto {
+            transform: scale(1.2);
+        }
+        .b2:hover .zbiru {
+            color: #244B9C;
+        }.b3:hover .bfoto {
+            transform: scale(1.2);
+        }
+        .b3:hover .zbiru {
+            color: #244B9C;
+        }
+        .b4:hover .bfoto {
+            transform: scale(1.2);
+        }
+        .b4:hover .zbiru {
+            color: #244B9C;
+        }
+        .b5:hover .bfoto {
+            transform: scale(1.2);
+        }
+        .b5:hover .zbiru {
+            color: #244B9C;
+        }
+        .b6:hover .bfoto {
+            transform: scale(1.2);
+        }
+        .b6:hover .zbiru {
+            color: #244B9C;
+        }
+        .b7:hover .bfoto {
+            transform: scale(1.2);
+        }
+        .b7:hover .zbiru {
+            color: #244B9C;
+        }
+        .b11:hover .bfoto {
+            transform: scale(1.2);
+        }
+        .b11:hover .zbiru {
+            color: #244B9C;
+        }
+        .b12:hover .bfoto {
+            transform: scale(1.2);
+        }
+        .b12:hover .zbiru {
+            color: #244B9C;
+        }
+        .b13:hover .bfoto {
+            transform: scale(1.2);
+        }
+        .b13:hover .zbiru {
+            color: #244B9C;
+        }
+        .bizradius {
+            border-radius: 10px;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+        .dympad {
+            top: 1%;
+            position: absolute;
+            margin-left: 13px;
+            margin-top: 7px;
+        }
+        .panah {
+            width: 20px;
+        }
+        .panahp {
+            width: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="pembungkus">
+        <div class="pembungkus1">
+            <div class="rela">
+                <div class="abso kiri">
+                    <div class="menu">
+                        <img src="Foto/menu.png" class="pmenu">
+                        <p class="tmenu">MENU</p>
+                    </div>
+                </div>
+                <div class="abso tengah">
+                    <div class="menu1" >
+                        <div class="border"style="display:flex; justify-content: center ;  align-items: center;position: relative;">
+                            <div class="width">
+                                <input type="search" placeholder="Cari Berita" class="cari">
+                            </div>
+                            <div>
+                                <img src="foto/search.png" style='height:20px;position: absolute;top: 15%;right: 3%;'/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="abso kanan">
+                    <div class="menu2">
+                        <input type="button" value="DAFTAR MPC" class="tombol1">
+                        <input type="button" value="MASUK" class="tombol2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ctext">
+        <div class="tulisan">
+            <img src="foto/logo detikcom.png" />            
+            <div class="nav">
+                <ul class="ul1">
+                    <li  ><a href="" class="a1" >detikNews</a></li>
+                    <li  ><a href="" class="a1">detikFinance</a></li>
+                    <li  ><a href="" class="a1">detikHot</a></li>
+                    <li  ><a href="" class="a1">detikInet</a></li>
+                    <li  ><a href="" class="a1">detikSport</a></li>
+                    <li  ><a href="" class="a1">detikOto</a></li>
+                    <li  ><a href="" class="a1">detikTravel</a></li>
+                    <li  ><a href="" class="a1">detikFood</a></li>
+                    <li  ><a href="" class="a1">detikHealth</a></li>
+                    <li  ><a href="" class="a1">Wolipop</a></li>
+                    <li  ><a href="" class="a1">20Detik</a></li>
+                    <div class="daerah">
+                        <button class="daerahbtn" onclick="myfunction()" onclick="rotateImg()">Daerah <img id="img" src="foto/Vtrans.png" class="vsize"  ></button>
+                            <div class="daerah-content" id="daerahdropdown">
+                                <a href="">Jateng</a>
+                                <a href="">Jatim</a>
+                                <a href="">Jabar</a>
+                                <a href="">Sulsel</a>
+                                <a href="">Sumut</a>
+                                <a href="">Bali</a>
+                            </div>
+                    </div>
+                </ul>
+            </div>
+            <div class="nav2">
+                <ul class="ul2">
+                    <li class="li2"><a href="" class="a2 a5"><img src="foto/minitipi.png" class="mini">Live TV</a></li>
+                    <li class="li2"><a href="" class="a2">Adsmart</a></li>
+                    <li class="li2"><a href="" class="a2">Foto</a></li>
+                    <li class="li2"><a href="" class="a2">detikX</a></li>
+                    <li class="li2"><a href="" class="a2">Sepakbola</a></li>
+                    <li class="li2"><a href="" class="a2">Pasangmata</a></li>
+                    <li class="li2"><a href="" class="a2">Hikmah</a></li>
+                    <li class="li2"><a href="" class="a2 a4">Edukasi</a></li>
+                    <li class="li2"><a href="" class="a2 a5">berbuatbaik.id</a></li>
+                    <li class="li3 li2"><a href="" class="a2 a3">Live Streaming MotoGP</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="pberita">
+            <div class="berita1">
+                <div class="b1">
+                    <div class="beritam">
+                        <div class="pzoom2 bradius">
+                            <img src="foto/Gambar besar.jpeg" class="foto1 bfoto bradius">
+                        </div>
+                        <div>
+                            <a href="" class="beritak beritak1 zbiru">32 Kia Sorento Dilelang Mulai Rp 260 Jutaan, tapi...</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="b2">
+                    <div class="beritam">
+                        <div class="pzoom2 bradius">
+                            <img src="foto/ilustrasi-lowongan-kerja-1_169.jpeg" class="foto1 bfoto bradius">
+                        </div>
+                        <div>
+                            <a href="" class="beritak zbiru">Mau Banyak Uang Tanpa Keluar Rumah? 5 Pekerjaan Ini Bisa Kamu Pilih</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="b3">                  
+                    <div class="beritam">
+                        <div class="pzoom2 bradius">
+                            <img src="foto/mohamed-salah_169.jpeg" class="foto1 bfoto bradius">
+                        </div>
+                        <div>
+                            <a href="" class="beritak zbiru">Pesan buat Mo Salah : Rumput Tetangga Tak Selalu Lebih Hijau</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="b4">
+                    <div class="beritam">
+                        <div class="pzoom2 bradius">
+                            <img src="foto/timnas-futsal-indonesia_169.jpeg" class="foto1 bfoto bradius">
+                        </div>
+                        <div>
+                            <a href="" class="beritak zbiru">Timnas Indonesia Dipastikan Dapat Perak Futsal SEA Games 2021</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="b5">
+                    <div class="beritam">
+                        <div class="pzoom2 bradius">
+                            <img src="foto/kondisi-kerusakan-di-ruas-jl-pabuaran-kabupaten-bogor-jawa-barat-18-mei-2022-muchamad-sholihindetikcom-2.jpeg" class="foto1 bfoto bradius">
+                        </div>
+                        <div>
+                            <a href="" class="beritak zbiru">Kondisi kerusakan di ruas jl pabuaran kabupaten Bogor Jawa Barat 18 Mei 2022 </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="berita2 bradius">
+                    <div class="viral bradius">
+                        <div class="b8">
+                                <div class="pzoom4 bradius">
+                                    <img src="foto/viral-brio-pakai-strobo-1_43.png" class="vfoto bradius foto4 bfoto">
+                                </div>
+                                <div>
+                                <a href="" class="vteks zoren">Viral Honda Brio Pakai Strobo di Malang, Selap-Selip di Jalanan Macet</a>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="terkait">
+                        <div class="terkait1">
+                            <div class="terkait2">Berita Terkait</div>
+                            <div class="hr1"><hr></div>
+                        </div>
+                        
+                            <div class="isiterkait">
+                                <div class="b9">
+                                    <a href="" class="a2 a6 zoren">NCT Dream Senang Balik ke Indonesia, Jisung Ngaku Terngiang-ngiang Hal Ini</a>
+                                </div> 
+                                <div class="b10">
+                                    <a href="" class="a2 a6 zoren">Gemas Maksimal! NCT Dream Main Games Bisik-bisik</a>
+                                </div>
+                            </div>  
+                                             
+                    </div>
+                </div>
+                <div class="doym">
+                    <div><img src="foto/dym_logo.png" class="pdoym"></div>
+                    <div class="bagi">
+                        <div class="tdoym">Bagi Anda yang menemukan masalah perkotaan, silakan kabarkan ke kami lewat klik tombol kirim.
+                        </div>
+                        <div class="tkirim">
+                            <button class="kirim tkirim">Kirim <img src="foto/panah putih.png" class="panahp"></button>
+                        </div>
+                    </div>
+                    <div class="pbdoym">                        
+                        <div class="doym1 abso bradius">  
+                            <div class="b11">
+                                <div class="pzoom5 bradius">                          
+                                    <img src="foto/warga-rusun-city-garden-cengkareng-jakbar-antre-air-bersih-29-maret-2022-dok-istimewa-2.jpeg" class="fdoym foto5 bfoto bradius">
+                                    <div class="tdoym1">
+                                        <a href="" class="a2 dympad zbiru">Krisis Air Bersih Rusun City Garden, PDIP DKI Minta PAM Ringankan Biaya</a>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="doym2 abso b12">
+                            <div class="pzoom5 bradius">
+                                <img src="foto/penampakan-perbaikan-longsor-di-jl-tanjung-burung-teluknaga-kabupaten-tangerang.jpeg" class="fdoym foto5 bfoto bradius">
+                                <div class="tdoym1">
+                                    <a href="" class="a2 dympad zbiru">Pengecoran Jl Tanjung Burung Tangerang Tunggu Tanggul Permanen BBWSCC</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="doym3 abso b13">
+                            <div class="pzoom5 bradius">
+                                <img src="foto/rest-area-km-62-b-ramai-pemudik-3_169.jpeg" class="fdoym bfoto foto5 bradius">
+                                <div class="tdoym1">
+                                    <a href="" class="a2 dympad zbiru">Rest Area KM 62B Ramai Pemudik</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pkdoym"><button class="kdoym bradius">Ke Halaman Do Your Magic <img src="foto/panah.png" class="panah"></button></div>
+                    <br><br><br><br><br><br>
+                    <hr>
+                </div>
+            </div>
+            <div>
+                <div><img src="foto/220511-biznetupdate-desktop.jpg" class="pbiz"></div>
+                <div class="biznet">
+                        <div class="b6">
+                            <div class="tbiz zoom1">
+                                <div class="pzoom3 bradius">
+                                    <img src="foto/advbiznet-1.jpeg" class="bfoto foto2 bradius">
+                                </div>
+                                <div class="padbiz">
+                                    <a href="" class="biz1 a2 zbiru">Ini Dia Cara Speedtest Internet Biznet dengan Mudah</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="b7">
+                            <div class="tbiz zoom1">
+                                <div class="pzoom3 bradius">
+                                    <img src="foto/adv-biznet-1.jpeg" class="bfoto foto2 ">
+                                </div>
+                                <div class="padbiz">
+                                    <a href="" class="biz1 a2 zbiru">Streaming Netflix Lebih Lancar dengan #PakeBiznet</a>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <div class="hrb">
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let rotation = 0;
+        function rotateImg() {
+            rotation += 180; 
+            if (rotation === 360) { 
+                rotation = 0;
+            }
+            document.querySelector("#img").style.transform = `rotate(${rotation}deg)`;
+        }
+        function myfunction() {
+            document.getElementById("daerahdropdown").classList.toggle("show");   
+        }
+
+        window.onclick = function(e) {
+            if(!e.target.matches('.daerahbtn')) {
+            var daerahdropdown = document.getElementById("daerahdropdown");
+                if (daerahdropdown.classList.contains('show')) {
+                    daerahdropdown.classList.remove('show');
+                }
+            }
+        }
+    </script>
+</body>
+</html>

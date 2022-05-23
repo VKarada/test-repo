@@ -1,0 +1,88 @@
+.grid-container {
+    background-color: darkorchid;
+    display:grid;
+    padding: 170px 50px ;
+}
+
+.container {
+    display: flex;
+    background-color: aqua;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.content {
+    background-color: green;padding: 50px; width:40%;
+}
+
+h1 {
+  color: blue;  
+}
+
+h2 {
+  font-family:Arial, Helvetica, sans-serif ;
+}
+
+.form {
+    background-color: lightgray;padding:10px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px 10px grey;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.id {
+  box-shadow: none;
+    border-color:lightgray ;
+    border-radius: 5px;
+    width: 271px;
+    padding: 10px 5px;
+}
+
+.pass {
+  box-shadow: none;
+  border-color: lightgray;
+  border-radius: 5px;
+  width: 271px;
+  padding: 10px 5px;
+}
+
+.masuk {
+  border-color:blue;
+  background-color: blue;
+  border-radius: 5px;
+  width: 280px;
+  padding: 10px 0px;
+}
+
+.sandi {
+  color: blue;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.akun {
+  background-color: lightgreen;
+  border-color: lightgreen;
+  border-radius: 5px;
+  padding: 10px 10px;
+}
+
+.buat {
+  text-decoration: none;
+}
+
+@media only screen and (max-width:800px) {
+  .grid-container {
+    background-color: red;
+  }
+  .content {
+    width: 65%;
+    text-align: center;
+  }
+}
